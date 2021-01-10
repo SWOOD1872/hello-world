@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "echo the project owner name env var"
           command: |
-            echo NAME = $PROJECT_OWNER_NAME
+            echo $PROJECT_OWNER_NAME
 workflows:
   welcome:
     jobs:
