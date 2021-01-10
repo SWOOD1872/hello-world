@@ -14,7 +14,10 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: echo NAME = $PROJECT_OWNER_NAME
+      - run:
+          name: "echo the project owner name env var"
+          command: |
+            echo NAME = $PROJECT_OWNER_NAME
 workflows:
   welcome:
     jobs:
