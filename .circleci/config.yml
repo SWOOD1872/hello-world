@@ -10,16 +10,17 @@ jobs:
           root: ~/
           paths:
             - output.txt
+
   print_output_file:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - attach_workspace:
           at: ~/
-      - run: cat output.txt
+      - run: cat ~/output.txt
 
 workflows:
-  welcome:
+  my_workflow:
     jobs:
       - save_hello_world_output
       - print_output_file:
